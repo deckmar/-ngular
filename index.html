@@ -1,0 +1,23 @@
+<html>
+<head>
+	<title>Angulär - AngularJS på svenska</title>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.3/angular.min.js"></script>
+	<script src="angulär.js"></script>
+
+	<script type="text/javascript">
+		angular.module('TestApp', ['angulär']);
+	</script>
+</head>
+<body ng-app="TestApp" ng-init="visa = true;">
+
+	<h1>Demo av Angulär</h1>
+
+	<label for="visningstoggel">Toggla visning</label>
+	<input type="checkbox" ng-model="visa" id="visningstoggel" />
+
+	<pre ng-visa="visa"> Visningsruta </pre>
+
+
+</body>
+</html>
