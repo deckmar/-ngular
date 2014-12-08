@@ -3,21 +3,25 @@
 	<title>Angulär - AngularJS på svenska</title>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.3/angular.min.js"></script>
-	<script src="angulär.js"></script>
+	<script src="ängular.js"></script>
 
 	<script type="text/javascript">
-		angular.module('TestApp', ['angulär']);
+		angular.module('TestApp', ['ängular']);
 	</script>
 </head>
-<body ng-app="TestApp" ng-init="visa = true;">
+<body ng-app="TestApp" ng-init="visa = true; lista = ['hej', 'där', 'världen']">
 
 	<h1>Demo av Angulär</h1>
+
+	<h2>ngVisa</h2>
 
 	<label for="visningstoggel">Toggla visning</label>
 	<input type="checkbox" ng-model="visa" id="visningstoggel" />
 
 	<pre ng-visa="visa"> Visningsruta </pre>
 
+	<h2>ngUpprepa</h2>
+	<p ng-upprepa="ord i lista">{{ ord }}</p>
 
 </body>
 </html>
